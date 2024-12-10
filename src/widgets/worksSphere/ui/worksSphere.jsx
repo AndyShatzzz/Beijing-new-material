@@ -6,8 +6,8 @@ import img3 from "../images/img3.svg";
 import img5 from "../images/img5.svg";
 import img6 from "../images/img6.svg";
 import img7 from "../images/img7.svg";
-import vector1 from "../images/vector1.svg";
-import vector2 from "../images/vector2.svg";
+import vector1 from "@/shared/images/Vector1.svg";
+import vector2 from "@/shared/images/Vector2.svg";
 import Image from "next/image";
 
 export const WorksSphere = () => {

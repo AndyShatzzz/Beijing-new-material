@@ -10,12 +10,12 @@ export default function WhyMe() {
   const arrData = [
     {
       image: image2,
-      title: "Deadline guarantee",
+      title: "The best price",
       _id: "6bdc2c2b-d8cf-41b0-8ee3-306beb3f28c1",
     },
     {
       image: image3,
-      title: "The best price",
+      title: "Deadline guarantee",
       _id: "6bdc2c2b-d8cf-41b0-8ee3-306beb3f28c2",
     },
     {

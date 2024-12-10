@@ -5,6 +5,7 @@ import WhyMe from "@/widgets/whyMe/ui/whyMe";
 import GoodsStore from "@/widgets/goodsStore/ui/goodsStore";
 import { AboutUs } from "@/widgets/aboutUs/ui/aboutUs";
 import { WorksSphere } from "@/widgets/worksSphere/ui/worksSphere";
+import Footer from "@/widgets/footer/ui/footer";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <WhyMe />
       <AboutUs />
       <WorksSphere />
-      {/* <GoodsStore /> */}
+      <GoodsStore />
+      <Footer />
     </main>
   );
 }

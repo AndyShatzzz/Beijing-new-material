@@ -6,134 +6,203 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./reactSlick.css";
 import Image from "next/image";
-import atolSmart from "../image/atolSmart.png";
-import mercuriy from "../image/mercuriy-001.webp";
-import dtco from "../image/dtco.webp";
-import dt001 from "../image/dt-101.webp";
-import egkls from "../image/egk_ls.webp";
-import ls1319 from "../image/ls1319.webp";
-import speed1224 from "../image/speed-12_24.webp";
-import card from "../image/card.png";
-import speed from "../image/speed.webp";
-import blockNKM from "../image/NKMBlock.webp";
 import { useEffect, useLayoutEffect, useState } from "react";
+import vector1 from "@/shared/images/Vector1.svg";
+import vector2 from "@/shared/images/Vector2.svg";
+import img1 from "../image/img1.webp";
+import img2 from "../image/img2.webp";
+import img3 from "../image/img3.webp";
+import img4 from "../image/img4.webp";
+import img5 from "../image/img5.webp";
+import img6 from "../image/img6.webp";
+import img7 from "../image/img7.webp";
+import img8 from "../image/img8.webp";
+import img9 from "../image/img9.webp";
+import img10 from "../image/img10.webp";
+import img11 from "../image/img11.webp";
+import img12 from "../image/img12.webp";
+import img13 from "../image/img13.webp";
+import img14 from "../image/img14.webp";
+import img15 from "../image/img15.webp";
+import img16 from "../image/img16.webp";
+import img17 from "../image/img17.webp";
 
 export default function GoodsStore() {
-  const [isOpenModal, setIsOpenModal] = useState(false);
   const data = [
     {
-      image: atolSmart,
-      name: "Тахограф Атол Смарт",
+      image: img1,
+      name: "Acid-resistant Bricks",
       _id: "645cbe78-b498-4a49-b3ad-981188889253",
-      description1: "Усовершенствованная модель",
-      description2: "Повышенная электрическая защита",
+      description1:
+        "Resistant to aggressive environments and mechanical impact",
+      description2: "Chemical and heat resistant",
       description3:
-        "Допущен к установке на автомобили для перевозки опасных грузов",
-      description4: "Высокая надежность и низкое энергопотребление",
-      price: "от 46 000 рублей",
+        "It has an average compressive strength of approximately 23,000 PSI",
+      description4: "Used to cover surfaces subject to heavy loads.",
     },
     {
-      image: mercuriy,
-      name: "Меркурий ТА-001",
+      image: img2,
+      name: "Acid-resistant Tile",
       _id: "382d8c1b-e38c-48d6-b066-ab97e673d66e",
       description1:
-        "Обеспечивает непрерывную, некорректируемую регистрацию информации о скорости и маршруте движения транспортных средств",
+        "Suitable for flooring applications in food and petrochemical plants where they are exposed to strong acids impact",
       description2:
-        "Предназначен для установки на колёсные транспортные средства категории М2, М3, N2 и N3",
-      // description3: "USB- и k-line интерфейсы",
-      // description4: "Слот расширения для установки дополнительного модуля",
-      price: "от 44 000 рублей",
+        "Resistant to acids, alkalis and other aggressive substances.",
+      description3: "Matte structure, non-slip and wear-resistant",
+      description4: "Resistance to high temperatures and no deformation",
     },
     {
-      image: dt001,
-      name: "Pars DT-101",
+      image: img3,
+      name: "Acid-resistant Powder",
       _id: "322d8c1a-e38a-48d6-b062-ab97e333d63a",
-      description1: "Цифровой тахограф с одобрением типа Европейского союза",
+      description1:
+        "It is a perfect component to make different acid-resistant mixtures like mastics, mortars and concretes",
       description2:
-        "Сертифицирован для пользования как внутри России, так и для международных перевозках",
+        "It used in chemically active media like galvanic and pickling baths, floors of chemicals plants, fume ducts and so on",
       description3:
-        "Разработан в соответствии с Приложением-1В Регламента Европейской комиссии 3821/85",
-      // description4: "Слот расширения для установки дополнительного модуля",
-      price: "от 80 000 рублей",
+        "It use the mortar as glue for acid-resistant tiles or bricks and for float work",
     },
     {
-      image: dtco,
-      name: "Continental VDO DTCO 1381",
+      image: img4,
+      name: "Putties and grouting Compounds",
       _id: "322d8c1a-e38a-48d6-b062-ab97e673d63e",
       description1:
-        "Контрольное устройство, применяемое и предназначенное для осуществления международных перевозок в рамках Соглашения ЕСТР. ",
+        "it is utilized to fill the gap in concrete cracks and voids in soil or rock",
       description2:
-        "Устанавливается на конвейерах европейских заводов-производителей транспортных средств",
-      // description3: "USB- и k-line интерфейсы",
-      // description4: "Слот расширения для установки дополнительного модуля",
-      price: "от 120 000 рублей",
+        "Used for grout stabilizes the soil directly in the weak zone",
     },
     {
-      image: card,
-      name: "Карта водителя",
+      image: img5,
+      name: "Refractory Brick",
       _id: "645cbe78-b498-4a49-b3ad-981188889253",
-      price: "от 4 500 рублей",
+      description1:
+        "it is a block of ceramic material that can withstand high temperatures, chemical environments and mechanical stress",
+      description2:
+        "It serve as linings for furnaces, reactors, boilers and other high-temperature equipment",
     },
     {
-      image: egkls,
-      name: "Индикаторная панель EGK LS",
+      image: img6,
+      name: "Fireproof Tile",
       _id: "645cbe78-b498-4a49-b3ad-981188489341",
       description1:
-        "Это прибор, который указывает скорость и обороты двигателя, но не является тахографом, поэтому его необходимо подключить к тахографу",
-      description2:
-        "Панель EGK-LS работает со всеми типами тахографов которые поддерживают протокол CAN",
-      price: "от 22 000 рублей",
+        "It can survive temperatures up to 1100 degrees, is shockproof and resistant to temperature changes",
+      description2: "It does not slip and has a significant thickness",
+      description3:
+        "It is formed under conditions of enormous thermal loads and high pressure.",
     },
     {
-      image: ls1319,
-      name: "Индикаторная панель LS 1319",
+      image: img7,
+      name: "Fire resistant compounds",
       _id: "645cbe78-b498-4a49-b3ad-983588489341",
       description1:
-        "Индикаторная панель LS 1319 в составе с тахографом (DTCO) заменяет тахограф 1319",
+        "Provide protection from high temperatures and resistance to aggressive conditions",
       description2:
-        "Спидометр вставляется вместо тахографа 1319 и работает с цифровым тахографом",
-      price: "от 16 000 рублей",
+        "It is distinguished by their thermal insulation properties and resistance to high-temperature effects",
+      description3:
+        "Provide reliable protection against fire and thermal effects, and also have good adhesion and strength",
     },
     {
-      image: speed1224,
-      name: "Спидометр 12/24V 140мм",
+      image: img8,
+      name: "Rubber sheets for steel structures protection",
       _id: "645cbe78-b498-4a49-b3ad-983588489341",
       description1:
-        "Предназначен для отображения скорости движения автомобиля, общего и суточного пробега",
+        "It serves to protect steel building elements exposed to chemical attack",
       description2:
-        "Сигнализирует о превышении предельно допустимой скорости движения автомобиля",
-      price: "от 6 500 рублей",
+        "It used to protect steel and concrete structures from corrosion",
     },
     {
-      image: speed1224,
-      name: "Спидометр 12/24V 100мм",
+      image: img9,
+      name: "Rubber mixtures for gumming chemical equipment",
       _id: "645cbe78-b498-4a49-b3ad-983588489341",
       description1:
-        "Предназначен для отображения скорости движения автомобиля, общего и суточного пробега",
-      description2:
-        "Сигнализирует о превышении предельно допустимой скорости движения автомобиля",
-      price: "от 6 000 рублей",
+        "It used for working with chemical equipment and are also widely used in chlorine production",
+      description2: "It is resistant to oils and various types of fuel",
     },
     {
-      image: blockNKM,
-      name: "Замена блока НКМ",
+      image: img10,
+      name: "Pulley lagging rubber linings",
       _id: "382d8c1b-e38c-48d6-b066-ab97e673d43a",
-      description1: "Производится один раз в 3 года",
-      description2: "Соответствует законодательству РФ",
-      description3: "Работа под ключ с настройкой и обновлением ПО",
-      price: "от 31 000 рублей",
+      description1:
+        "Flexible rubber segment connection allows the slats to be bent in the middle, allowing for easy bolting onto the rounded surface of the drum",
+      description2:
+        "It consists of a flexible rubber base and ceramic inserts with a surface covered with protruding pimples",
+      description3:
+        "It improves the adhesion coefficient and centers the belt, and prevents sticking thanks to the self-cleaning profile",
     },
     {
-      image: speed,
-      name: "Датчики скорости",
+      image: img11,
+      name: "Stone wool based insulation materials",
       _id: "645cbe78-b498-4a49-b3ad-981188889573",
-      // description1: "Датчик скорости динамический в ассортименте",
-      description2: "Датчик скорости импульсный (19,8 мм) ",
-      description3: "Датчик скорости импульсный (25 мм)",
-      description4: "Датчик скорости импульсный (35 мм)",
-      description5: "Датчик скорости импульсный (63,2 мм)",
-      description6: "Датчик скорости импульсный (90 мм)",
-      price: "от 5 000 рублей",
+      description1:
+        "Is is distinguished by their environmentally friendly composition, durability and fire resistance",
+      description2: "Melting point reaches up to 1000° C",
+      description3:
+        "Thermal conductivity values range from 0.04 to 0.05 W/(m*K)",
+      description4:
+        "Vapor permeability in the range from 0.25 to 0.3 mg/(m•h•Pa)",
+    },
+    {
+      image: img12,
+      name: "Fiberglass based insulation materials",
+      _id: "645cbe78-b498-4a49-c3ad-431188889573",
+      description1:
+        "Non-combustible mineral heat and sound insulation, intended for use in frame wall and partition structures",
+      description2:
+        "It is used to maintain a comfortable microclimate in the room, quartz insulation has one of the best indicators",
+      description3:
+        "This material does not crumble, does not break, does not fall apart, regains its shape and easily rises even from a compressed state",
+    },
+    {
+      image: img13,
+      name: "Insulation based on foamed polyethylene",
+      _id: "645cbe77-c498-4a49-c3ad-436148339573",
+      description1:
+        "It is used for thermal insulation of door and window openings, ventilation and chimney systems",
+      description2: "It combines low thermal conductivity and water resistance",
+      description3:
+        "The product's special feature is heat-reflecting layers that are applied to one or both sides of the insulation, which ensures maximum heat retention in the room",
+    },
+    {
+      image: img14,
+      name: "Aerogel",
+      _id: "645cbe77-c498-1b49-d3ad-436148339573",
+      description1:
+        "During operation, the thermal conductivity coefficient does not change, for example, due to moisture or aging",
+      description2:
+        "It reliably protect building structures from heat loss, effectively remove water vapor",
+      description3:
+        "Aerogel is based on natural quartz powder, the use of which is safe for people and the environment",
+    },
+    {
+      image: img15,
+      name: "Polyethylene plastic panels",
+      _id: "132cbe77-c498-1b49-d3ad-436148339573",
+      description1: "Heat resistance and frost resistance",
+      description2: "Good chemical stability",
+      description3: "High rigidity and impact resistance",
+      description4:
+        "This material can withstand the effects of most acids, alkalis and organic solutions",
+    },
+    {
+      image: img16,
+      name: "Polypropylene panels",
+      _id: "132cbe77-c498-1b49-d3ad-436148354295",
+      description1:
+        "It durable and reliable even when used in aggressive environments",
+      description2:
+        "The hygienic nature of the panels allows them to be used in the food industry and medicine",
+      description3:
+        "It provides additional heat and sound insulation, increase fire resistance and resistance to aggressive atmospheric factors",
+    },
+    {
+      image: img17,
+      name: "Chemical additives for concrete",
+      _id: "132cbe77-c498-1b49-d3ad-436148343855",
+      description1:
+        "It makes concrete dense and increase its fluidity. The plastic mixture makes it easier to fill formwork and casting molds",
+      description2: "It used to mix super-mobile mixtures",
+      description3:
+        "Accelerators help the mixture to harden faster, and retarders slow down the hardening process if the concrete is transported over long distances",
     },
   ];
 
@@ -172,8 +241,14 @@ export default function GoodsStore() {
     className: "containerWrapper",
     centerPadding: "100px",
   };
+
   return (
     <section className={styles.mainContainer}>
+      <div className={styles.titleContainer}>
+        <h2 className={styles.title}>Our Products</h2>
+        <Image src={vector1} alt="Image" />
+        <Image className={styles.vector2} src={vector2} alt="Image" />
+      </div>
       <div className={`slider-container ${styles.container}`}>
         <Slider {...settings}>
           {data &&
@@ -197,7 +272,7 @@ export default function GoodsStore() {
                     className={styles.button}
                     onClick={() => setIsOpenModal(true)}
                   >
-                    Заказать
+                    Read more
                   </button>
                 </div>
               </div>
