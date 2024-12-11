@@ -54,16 +54,16 @@ export default function Header() {
           <span className={styles.logoText}>NEW MATERIALS</span>
         </Link>
         <div className={menuStyle}>
-          <Link href="/services" className={styles.links}>
+          <Link href="/#about" className={styles.links}>
             About Us
           </Link>
-          <Link href="/articles" className={styles.links}>
+          <Link href="/materials" className={styles.links}>
             Our Products
           </Link>
           <Link href="/license" className={styles.links}>
             Scope of Application
           </Link>
-          <Link href="/requisites" className={styles.links}>
+          <Link href="/#contacts" className={styles.links}>
             Contacts
           </Link>
           {/* <a href="/#shop" className={styles.links} onClick={handleCloseMenu}>

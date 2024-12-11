@@ -30,7 +30,7 @@ export default function WhyMe() {
     },
   ];
   return (
-    <section className={styles.container}>
+    <section id="about" className={styles.container}>
       <div className={styles.contentContainer}>
         <div className={styles.yearWrapper}>
           <div className={styles.yearContainer}>

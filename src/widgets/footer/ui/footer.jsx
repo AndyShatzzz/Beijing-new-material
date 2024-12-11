@@ -8,15 +8,31 @@ import EmailIcon from "@mui/icons-material/Email";
 import Image from "next/image";
 import mail from "../images/mail.svg";
 import call from "../images/call.svg";
-import mesto from "../images/mesto.svg";
+import footerVector1 from "../images/FooterVector1.svg";
+import footerVector2 from "../images/FooterVector2.svg";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <section id="contacts" className={styles.footerContainer}>
+      <Image
+        className={styles.vectorImageTop}
+        src={footerVector1}
+        alt="Image"
+      />
+      <Image
+        className={styles.vectorImageBottom}
+        src={footerVector2}
+        alt="Image"
+      />
       <div className={styles.contentContainer}>
+        <Link href="/" className={styles.logoLink}>
+          <span className={styles.logo}>BEIJING</span>{" "}
+          <span className={styles.logoText}>NEW MATERIALS</span>
+        </Link>
         <div className={styles.textContainer}>
-          <h2 className={styles.title}>Контакты</h2>
-          <div className={styles.contactContainer}>
+          <h2 className={styles.title}>Contacts</h2>
+          {/* <div className={styles.contactContainer}>
             <Image src={call} alt="Трубка" />
             <div className={styles.phNumber}>
               <a className={styles.text} href="tel:+74742715185">
@@ -35,19 +51,19 @@ export default function Footer() {
                 +7(915) 851-02-55
               </a>
             </div>
-          </div>
+          </div> */}
           <div className={styles.contactContainer}>
-            <Image src={mail} alt="Письмо" />
+            <Image src={mail} alt="Mail" />
             <a
               className={styles.text}
-              href="mailto:TAHODRAYVER@MAIL.RU"
+              href="mailto:BeijingNEWMATERIALS@GMAIL.COM"
               target="blank"
             >
-              TAHODRAYVER@MAIL.RU
+              BEIJINGNEWMATERIALS@GMAIL.COM
             </a>
           </div>
         </div>
-        <div className={styles.textContainer}>
+        {/* <div className={styles.textContainer}>
           <h2 className={styles.title}>Обратная связь</h2>
           <div className={styles.socials}>
             <a
@@ -78,12 +94,12 @@ export default function Footer() {
               </Avatar>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
-      {/* <div className={styles.bottomContainer}>
+      <div className={styles.bottomContainer}>
         <p className={styles.bottomText}>Copyright ©2024</p>
-        <p className={styles.bottomText}>ТАХО ДРАЙВЕР - установка тахографов</p>
-      </div> */}
+        <p className={styles.bottomText}>Beijing new Materials Co. Ltd.</p>
+      </div>
     </section>
   );
 }
