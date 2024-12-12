@@ -4,7 +4,7 @@ import image1 from "../images/image1.webp";
 
 export const AboutUs = () => {
   return (
-    <section>
+    <section className={styles.target} id="about">
       <div className={styles.container}>
         <Image className={styles.img} src={image1} alt="Картинка" />
         <div className={styles.textContainer}>

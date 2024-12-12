@@ -9,23 +9,24 @@ import Image from "next/image";
 import { useEffect, useLayoutEffect, useState } from "react";
 import vector1 from "@/shared/images/Vector1.svg";
 import vector2 from "@/shared/images/Vector2.svg";
-import img1 from "../image/img1.webp";
-import img2 from "../image/img2.webp";
-import img3 from "../image/img3.webp";
-import img4 from "../image/img4.webp";
-import img5 from "../image/img5.webp";
-import img6 from "../image/img6.webp";
-import img7 from "../image/img7.webp";
-import img8 from "../image/img8.webp";
-import img9 from "../image/img9.webp";
-import img10 from "../image/img10.webp";
-import img11 from "../image/img11.webp";
-import img12 from "../image/img12.webp";
-import img13 from "../image/img13.webp";
-import img14 from "../image/img14.webp";
-import img15 from "../image/img15.webp";
-import img16 from "../image/img16.webp";
-import img17 from "../image/img17.webp";
+import img1 from "@/shared/images/img1.webp";
+import img2 from "@/shared/images/img2.webp";
+import img3 from "@/shared/images/img3.webp";
+import img4 from "@/shared/images/img4.webp";
+import img5 from "@/shared/images/img5.webp";
+import img6 from "@/shared/images/img6.webp";
+import img7 from "@/shared/images/img7.webp";
+import img8 from "@/shared/images/img8.webp";
+import img9 from "@/shared/images/img9.webp";
+import img10 from "@/shared/images/img10.webp";
+import img11 from "@/shared/images/img11.webp";
+import img12 from "@/shared/images/img12.webp";
+import img13 from "@/shared/images/img13.webp";
+import img14 from "@/shared/images/img14.webp";
+import img15 from "@/shared/images/img15.webp";
+import img16 from "@/shared/images/img16.webp";
+import img17 from "@/shared/images/img17.webp";
+import Link from "next/link";
 
 export default function GoodsStore() {
   const data = [
@@ -39,6 +40,7 @@ export default function GoodsStore() {
       description3:
         "It has an average compressive strength of approximately 23,000 PSI",
       description4: "Used to cover surfaces subject to heavy loads.",
+      link: "/materials/acid-resistant",
     },
     {
       image: img2,
@@ -50,6 +52,7 @@ export default function GoodsStore() {
         "Resistant to acids, alkalis and other aggressive substances.",
       description3: "Matte structure, non-slip and wear-resistant",
       description4: "Resistance to high temperatures and no deformation",
+      link: "/materials/acid-resistant",
     },
     {
       image: img3,
@@ -61,6 +64,7 @@ export default function GoodsStore() {
         "It used in chemically active media like galvanic and pickling baths, floors of chemicals plants, fume ducts and so on",
       description3:
         "It use the mortar as glue for acid-resistant tiles or bricks and for float work",
+      link: "/materials/acid-resistant",
     },
     {
       image: img4,
@@ -70,6 +74,7 @@ export default function GoodsStore() {
         "it is utilized to fill the gap in concrete cracks and voids in soil or rock",
       description2:
         "Used for grout stabilizes the soil directly in the weak zone",
+      link: "/materials/acid-resistant",
     },
     {
       image: img5,
@@ -79,6 +84,7 @@ export default function GoodsStore() {
         "it is a block of ceramic material that can withstand high temperatures, chemical environments and mechanical stress",
       description2:
         "It serve as linings for furnaces, reactors, boilers and other high-temperature equipment",
+      link: "/materials/fire-resistant",
     },
     {
       image: img6,
@@ -89,6 +95,7 @@ export default function GoodsStore() {
       description2: "It does not slip and has a significant thickness",
       description3:
         "It is formed under conditions of enormous thermal loads and high pressure.",
+      link: "/materials/fire-resistant",
     },
     {
       image: img7,
@@ -100,6 +107,7 @@ export default function GoodsStore() {
         "It is distinguished by their thermal insulation properties and resistance to high-temperature effects",
       description3:
         "Provide reliable protection against fire and thermal effects, and also have good adhesion and strength",
+      link: "/materials/fire-resistant",
     },
     {
       image: img8,
@@ -109,6 +117,7 @@ export default function GoodsStore() {
         "It serves to protect steel building elements exposed to chemical attack",
       description2:
         "It used to protect steel and concrete structures from corrosion",
+      link: "/materials/rubber-products",
     },
     {
       image: img9,
@@ -117,6 +126,7 @@ export default function GoodsStore() {
       description1:
         "It used for working with chemical equipment and are also widely used in chlorine production",
       description2: "It is resistant to oils and various types of fuel",
+      link: "/materials/rubber-products",
     },
     {
       image: img10,
@@ -128,6 +138,7 @@ export default function GoodsStore() {
         "It consists of a flexible rubber base and ceramic inserts with a surface covered with protruding pimples",
       description3:
         "It improves the adhesion coefficient and centers the belt, and prevents sticking thanks to the self-cleaning profile",
+      link: "/materials/rubber-products",
     },
     {
       image: img11,
@@ -140,6 +151,7 @@ export default function GoodsStore() {
         "Thermal conductivity values range from 0.04 to 0.05 W/(m*K)",
       description4:
         "Vapor permeability in the range from 0.25 to 0.3 mg/(m•h•Pa)",
+      link: "/materials/thermal-insulation",
     },
     {
       image: img12,
@@ -151,6 +163,7 @@ export default function GoodsStore() {
         "It is used to maintain a comfortable microclimate in the room, quartz insulation has one of the best indicators",
       description3:
         "This material does not crumble, does not break, does not fall apart, regains its shape and easily rises even from a compressed state",
+      link: "/materials/thermal-insulation",
     },
     {
       image: img13,
@@ -161,6 +174,7 @@ export default function GoodsStore() {
       description2: "It combines low thermal conductivity and water resistance",
       description3:
         "The product's special feature is heat-reflecting layers that are applied to one or both sides of the insulation, which ensures maximum heat retention in the room",
+      link: "/materials/thermal-insulation",
     },
     {
       image: img14,
@@ -172,6 +186,7 @@ export default function GoodsStore() {
         "It reliably protect building structures from heat loss, effectively remove water vapor",
       description3:
         "Aerogel is based on natural quartz powder, the use of which is safe for people and the environment",
+      link: "/materials/thermal-insulation",
     },
     {
       image: img15,
@@ -182,6 +197,7 @@ export default function GoodsStore() {
       description3: "High rigidity and impact resistance",
       description4:
         "This material can withstand the effects of most acids, alkalis and organic solutions",
+      link: "/materials/plastic-panels",
     },
     {
       image: img16,
@@ -193,6 +209,7 @@ export default function GoodsStore() {
         "The hygienic nature of the panels allows them to be used in the food industry and medicine",
       description3:
         "It provides additional heat and sound insulation, increase fire resistance and resistance to aggressive atmospheric factors",
+      link: "/materials/plastic-panels",
     },
     {
       image: img17,
@@ -203,6 +220,7 @@ export default function GoodsStore() {
       description2: "It used to mix super-mobile mixtures",
       description3:
         "Accelerators help the mixture to harden faster, and retarders slow down the hardening process if the concrete is transported over long distances",
+      link: "/materials/chemical-additives",
     },
   ];
 
@@ -268,12 +286,9 @@ export default function GoodsStore() {
                   <p className={styles.text}>{item.description5}</p>
                   <p className={styles.text}>{item.description6}</p>
                   <p className={styles.price}>{item.price}</p>
-                  <button
-                    className={styles.button}
-                    onClick={() => setIsOpenModal(true)}
-                  >
+                  <Link className={styles.button} href={item.link}>
                     Read more
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}

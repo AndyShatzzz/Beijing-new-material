@@ -16,7 +16,7 @@ export default function Header() {
   const [wrapperStyle, setWrapperStyle] = useState(styles.opacityWrapper);
   useEffect(() => {
     window.addEventListener("scroll", (evt) => {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 10) {
         setHeadClass(styles.headerSticky);
       } else {
         setHeadClass(styles.header);
@@ -50,68 +50,39 @@ export default function Header() {
       <div className={wrapperStyle}></div>
       <div className={styles.container}>
         <Link href="/" className={styles.link}>
-          <span className={styles.logo}>BEIJING</span>{" "}
+          <span className={styles.logo}>BEIJING</span>
           <span className={styles.logoText}>NEW MATERIALS</span>
         </Link>
         <div className={menuStyle}>
-          <Link href="/#about" className={styles.links}>
+          <Link
+            href="/#about"
+            className={styles.links}
+            onClick={handleCloseMenu}
+          >
             About Us
           </Link>
-          <Link href="/materials" className={styles.links}>
+          <Link
+            href="/materials"
+            className={styles.links}
+            onClick={handleCloseMenu}
+          >
             Our Products
           </Link>
-          <Link href="/license" className={styles.links}>
+          <Link
+            href="/license"
+            className={styles.links}
+            onClick={handleCloseMenu}
+          >
             Scope of Application
           </Link>
-          <Link href="/#contacts" className={styles.links}>
-            Contacts
-          </Link>
-          {/* <a href="/#shop" className={styles.links} onClick={handleCloseMenu}>
-            МАГАЗИН
-          </a>
-          <a
+          <Link
             href="/#contacts"
             className={styles.links}
             onClick={handleCloseMenu}
           >
-            КОНТАКТЫ
-          </a> */}
-          {/* <a className={styles.links}></a> */}
+            Contacts
+          </Link>
         </div>
-        {/* <div className={styles.containerFeedback}>
-          <a className={styles.linkPhone} href="tel:+74742391205">
-            +7(4742) 39-12-05
-          </a>
-          <div className={styles.socials}>
-            <a
-              className={styles.linkSocial}
-              href="https://wa.me/79005963293"
-              target="blank"
-            >
-              <Avatar sx={{ bgcolor: "#2cb742" }}>
-                <WhatsAppIcon />
-              </Avatar>
-            </a>
-            <a
-              className={styles.linkSocial}
-              href="https://t.me/Anton391205"
-              target="blank"
-            >
-              <Avatar sx={{ bgcolor: "#27a7e7" }}>
-                <TelegramIcon />
-              </Avatar>
-            </a>
-            <a
-              className={styles.linkSocial}
-              href="mailto:TAHODRAYVER@MAIL.RU"
-              target="blank"
-            >
-              <Avatar sx={{ bgcolor: "#3e65cf" }}>
-                <EmailIcon />
-              </Avatar>
-            </a>
-          </div>
-        </div> */}
         {!isMenuOpen && (
           <Avatar
             sx={{ margin: 0, padding: 0, bgcolor: "#ff0000" }}

@@ -6,38 +6,40 @@ import image1 from "../images/image1.webp";
 import image2 from "../images/image2.webp";
 import image3 from "../images/image3.webp";
 import image4 from "../images/image4.webp";
+import image5 from "../images/image5.webp";
+import image6 from "../images/image6.webp";
 
 export const OurProducts = () => {
   const arrData = [
     {
       text: "Acid-resistant materials",
-      link: "/products/acid-resistant",
+      link: "/materials/acid-resistant",
       img: image1,
     },
     {
       text: "Fire-resistant and refractory materials",
-      link: "/products/fire-resistant",
+      link: "/materials/fire-resistant",
       img: image2,
     },
     {
       text: "Rubber products",
-      link: "/products/rubber-products",
+      link: "/materials/rubber-products",
       img: image3,
     },
     {
       text: "Thermal insulation materials",
-      link: "/products/thermal-insulation",
+      link: "/materials/thermal-insulation",
       img: image4,
     },
     {
       text: "Plastic panels",
-      link: "/products/plastic-panels",
-      // img: image1,
+      link: "/materials/plastic-panels",
+      img: image5,
     },
     {
       text: "Chemical additives for concrete",
-      link: "/products/chemical-additives",
-      // img: image1,
+      link: "/materials/chemical-additives",
+      img: image6,
     },
   ];
   return (

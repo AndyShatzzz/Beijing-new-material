@@ -109,9 +109,13 @@
 }
 
 .button {
+  text-align: center;
+  text-decoration: none;
   margin: 0;
   width: 270px;
   font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   color: #fff;
   height: 50px;
   max-height: 50px;
@@ -121,6 +125,9 @@
   position: absolute;
   bottom: 20px;
   left: calc(100% / 2 - 135px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation: animationButton 2s ease infinite;
 }
 
