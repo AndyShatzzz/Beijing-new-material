@@ -35,7 +35,7 @@ export default function AcidResistant() {
   return (
     <main className={styles.main} style={{ backgroundColor: "#fff" }}>
       <Header />
-      <WrapperRoute />
+      <WrapperRoute title={"Acid-resistant materials"} />
       <Articles arrData={arrData} />
 
       <Footer />

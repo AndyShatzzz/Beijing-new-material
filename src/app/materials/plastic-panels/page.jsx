@@ -23,7 +23,7 @@ export default function PlasticPanels() {
   return (
     <main className={styles.main} style={{ backgroundColor: "#fff" }}>
       <Header />
-      <WrapperRoute />
+      <WrapperRoute title={"Plastic panels"} />
       <Articles arrData={arrData} />
 
       <Footer />

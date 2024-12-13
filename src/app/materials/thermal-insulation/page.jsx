@@ -35,7 +35,7 @@ export default function ThermalInsulation() {
   return (
     <main className={styles.main} style={{ backgroundColor: "#fff" }}>
       <Header />
-      <WrapperRoute />
+      <WrapperRoute title={"Rubber products"} />
       <Articles arrData={arrData} />
 
       <Footer />

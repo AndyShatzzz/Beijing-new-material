@@ -69,7 +69,7 @@ export default function Header() {
             Our Products
           </Link>
           <Link
-            href="/license"
+            href="/scope-of-application"
             className={styles.links}
             onClick={handleCloseMenu}
           >

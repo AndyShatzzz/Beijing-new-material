@@ -29,7 +29,7 @@ export default function FireResistant() {
   return (
     <main className={styles.main} style={{ backgroundColor: "#fff" }}>
       <Header />
-      <WrapperRoute />
+      <WrapperRoute title={"Fire-resistant and refractory materials"} />
       <Articles arrData={arrData} />
 
       <Footer />

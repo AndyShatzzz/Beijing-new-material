@@ -17,7 +17,7 @@ export default function PlasticPanels() {
   return (
     <main className={styles.main} style={{ backgroundColor: "#fff" }}>
       <Header />
-      <WrapperRoute />
+      <WrapperRoute title={"Chemical additives for concrete"} />
       <Articles arrData={arrData} />
 
       <Footer />
