@@ -14,6 +14,17 @@ export default function Header() {
   const [menuStyle, setMenuStyle] = useState(styles.linksContainer);
   const [wrapperStyle, setWrapperStyle] = useState(styles.opacityWrapper);
   const { t } = useTranslation();
+  const [showWrapper, setShowWrapper] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setShowWrapper(width < 930 && width > 630);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", (evt) => {
@@ -83,9 +94,13 @@ export default function Header() {
           >
             {t("Contacts")}
           </Link>
-          {/* <div className={styles.languageSwitcher}> */}
-          <LanguageSwitcher />
-          {/* </div> */}
+          {showWrapper ? (
+            <div className={styles.languageSwitcher}>
+              <LanguageSwitcher />
+            </div>
+          ) : (
+            <LanguageSwitcher />
+          )}
         </div>
         {!isMenuOpen && (
           <IconButton
