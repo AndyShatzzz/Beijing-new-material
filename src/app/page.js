@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/widgets/header/ui/header";
 import styles from "./page.module.scss";
 import About from "@/widgets/about/ui/about";

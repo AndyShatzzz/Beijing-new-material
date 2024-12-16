@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/widgets/header/ui/header";
 import React from "react";
 import styles from "@/app/page.module.scss";

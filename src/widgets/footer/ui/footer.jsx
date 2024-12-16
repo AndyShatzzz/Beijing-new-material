@@ -11,8 +11,10 @@ import call from "../images/call.svg";
 import footerVector1 from "../images/FooterVector1.svg";
 import footerVector2 from "../images/FooterVector2.svg";
 import Link from "next/link";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <section id="contacts" className={styles.footerContainer}>
       <Image
@@ -27,11 +29,11 @@ export default function Footer() {
       />
       <div className={styles.contentContainer}>
         <Link href="/" className={styles.logoLink}>
-          <span className={styles.logo}>BEIJING</span>{" "}
-          <span className={styles.logoText}>NEW MATERIALS</span>
+          <span className={styles.logo}>{t("BEIJING")}</span>{" "}
+          <span className={styles.logoText}>{t("NEW MATERIALS")}</span>
         </Link>
         <div className={styles.textContainer}>
-          <h2 className={styles.title}>Contacts</h2>
+          <h2 className={styles.title}>{t("Contacts")}</h2>
           {/* <div className={styles.contactContainer}>
             <Image src={call} alt="Трубка" />
             <div className={styles.phNumber}>
@@ -97,8 +99,10 @@ export default function Footer() {
         </div> */}
       </div>
       <div className={styles.bottomContainer}>
-        <p className={styles.bottomText}>Copyright ©2024</p>
-        <p className={styles.bottomText}>Beijing new Materials Co. Ltd.</p>
+        <p className={styles.bottomText}>{t("Copyright ©2024")}</p>
+        <p className={styles.bottomText}>
+          {t("Beijing new Materials Co. Ltd.")}
+        </p>
       </div>
     </section>
   );

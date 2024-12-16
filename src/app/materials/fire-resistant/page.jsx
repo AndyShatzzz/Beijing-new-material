@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/widgets/header/ui/header";
 import React from "react";
 import styles from "@/app/page.module.scss";
@@ -12,7 +13,7 @@ export default function FireResistant() {
   const arrData = [
     {
       image: img5,
-      subtitle: "Refractory brick ",
+      subtitle: "Refractory brick",
       text: "These bricks are made of fireproof clay, which contains 30-40% aluminium oxide, alumina, and 50% silicon dioxide or silicon oxide in its composition. Thus, the fireclay bricks are used for objects with constant contact with fire and where effective protection against high temperatures is particularly important.",
     },
     {
@@ -23,7 +24,7 @@ export default function FireResistant() {
     {
       image: img7,
       subtitle: "Fire resistant compounds",
-      text: "Fire resistant compounds are intended for the production of large-sized monolithic linings and repair work on furnace masonry. Also, similar mixtures are used for the manufacture of ladles with transport or pouring functions. Fire resistant compounds are easy to use and high-tech. The use of such materials makes it possible to carry out linings of the most complex structures and various geometric shapes.",
+      text: "Fire resistant compounds are intended for the production of large-sized monolithic linings and repair work on furnace masonry. Also, similar mixtures are used for the manufacture of ladles with transport or pouring functions. Fire resistant compounds are easy to use and high-tech. The use of such materials makes it possible to carry out linings of the most complex structures and various geometric shapes.",
     },
   ];
   return (

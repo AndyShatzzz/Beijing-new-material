@@ -8,13 +8,15 @@ import Image from "next/image";
 import mainImage from "../images/mainImage.webp";
 import mainImage2 from "../images/mainImage2.webp";
 import mainImage3 from "../images/mainImage3.webp";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export default function About() {
+  const { t } = useTranslation();
   const arrData = [
     {
       img: mainImage,
       title:
-        "Beijing New Materials Co., Ltd. - reliable protection of enterprises ",
+        "Beijing New Materials Co., Ltd. - reliable protection of enterprises",
       _id: "df710270-2db0-4345-bca5-cfe4bed46c74",
     },
     {
@@ -56,7 +58,7 @@ export default function About() {
                 src={item.img}
                 alt="Картинка"
               />
-              <h1 className={styles.title}>{item.title}</h1>
+              <h1 className={styles.title}>{t(item.title)}</h1>
             </>
           ))}
         </Slider>

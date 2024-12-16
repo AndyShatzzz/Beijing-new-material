@@ -8,8 +8,10 @@ import img6 from "@/shared/images/application5.svg";
 import vector1 from "@/shared/images/Vector1.svg";
 import vector2 from "@/shared/images/Vector2.svg";
 import Image from "next/image";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export const WorksSphere = () => {
+  const { t } = useTranslation();
   const arrData = [
     {
       image: img1,
@@ -36,7 +38,7 @@ export const WorksSphere = () => {
     <section className={styles.mainContainer}>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h2 className={styles.title}>Scope of Application</h2>
+          <h2 className={styles.title}>{t("Scope of Application")}</h2>
           <Image src={vector1} alt="Image" />
           <Image className={styles.vector2} src={vector2} alt="Image" />
         </div>
@@ -44,9 +46,9 @@ export const WorksSphere = () => {
           {arrData.map((item, index) => (
             <div className={styles.gridContainer} key={index}>
               <Image className={styles.image} src={item.image} alt="Картинка" />
-              <p className={styles.text}>{item.text}</p>
+              <p className={styles.text}>{t(item.text)}</p>
               <a href="#" className={styles.button}>
-                <p className={styles.buttonText}>Read more</p>
+                <p className={styles.buttonText}>{t("Read more")}</p>
                 <Image
                   className={styles.buttonVector1}
                   src={vector1}

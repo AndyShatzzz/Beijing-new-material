@@ -3,10 +3,12 @@ import image1 from "../images/image1.svg";
 import image2 from "../images/image2.svg";
 import image3 from "../images/image3.svg";
 import image4 from "../images/image4.svg";
-
 import styles from "./whyMe.module.scss";
+import { useTranslation } from "../../../context/hooks/useTranslate";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function WhyMe() {
+  const { t } = useTranslation();
   const arrData = [
     {
       image: image2,
@@ -29,6 +31,7 @@ export default function WhyMe() {
       _id: "6bdc2c2b-d8cf-41b0-8ee3-306beb3f28c5",
     },
   ];
+
   return (
     <section className={styles.container}>
       <div className={styles.contentContainer}>
@@ -37,10 +40,12 @@ export default function WhyMe() {
             <p className={styles.yearTitle}>
               1<span className={styles.yearTitleRed}>5</span>
             </p>
-            <p className={styles.yearTitleText}>years of experience</p>
+            <p className={styles.yearTitleText}>{t("years of experience")}</p>
           </div>
           <p className={styles.yearSubtitleText}>
-            In the production and supply of refractory materials for industry
+            {t(
+              "In the production and supply of refractory materials for industry"
+            )}
           </p>
         </div>
         <div className={styles.gridContainer}>
@@ -52,7 +57,7 @@ export default function WhyMe() {
                   src={item.image}
                   alt={item.title}
                 />
-                <p className={styles.subtitle}>{item.title}</p>
+                <p className={styles.subtitle}>{t(item.title)}</p>
               </div>
             ))}
         </div>

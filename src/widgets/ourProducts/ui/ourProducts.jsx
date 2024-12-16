@@ -8,8 +8,10 @@ import image3 from "../images/image3.webp";
 import image4 from "../images/image4.webp";
 import image5 from "../images/image5.webp";
 import image6 from "../images/image6.webp";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export const OurProducts = () => {
+  const { t } = useTranslation();
   const arrData = [
     {
       text: "Acid-resistant materials",
@@ -50,7 +52,7 @@ export const OurProducts = () => {
             <div className={styles.contentWrapper}>
               <Image className={styles.img} src={item.img} alt={item.text} />
               <div className={styles.overlay}></div>
-              <h2 className={styles.title}>{item.text}</h2>
+              <h2 className={styles.title}>{t(item.text)}</h2>
             </div>
           </Link>
         ))}

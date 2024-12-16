@@ -27,8 +27,10 @@ import img15 from "@/shared/images/img15.webp";
 import img16 from "@/shared/images/img16.webp";
 import img17 from "@/shared/images/img17.webp";
 import Link from "next/link";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export default function GoodsStore() {
+  const { t } = useTranslation();
   const data = [
     {
       image: img1,
@@ -263,7 +265,7 @@ export default function GoodsStore() {
   return (
     <section className={styles.mainContainer}>
       <div className={styles.titleContainer}>
-        <h2 className={styles.title}>Our Products</h2>
+        <h2 className={styles.title}>{t("Our Products")}</h2>
         <Image src={vector1} alt="Image" />
         <Image className={styles.vector2} src={vector2} alt="Image" />
       </div>

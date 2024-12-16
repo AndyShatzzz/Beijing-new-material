@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./applicationAreas.module.scss";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export const ApplicationAreas = () => {
+  const { t } = useTranslation();
   const arrData = [
     {
       title: "Metallurgical plants",
@@ -33,11 +35,11 @@ export const ApplicationAreas = () => {
     <section className={styles.applicationAreasSection}>
       <div className={styles.cardGrid}>
         {arrData.map((item, index) => (
-          <a href={item.link} key={index} className={styles.card}>
+          <a href="#" key={index} className={styles.card}>
             <div
               className={`${styles.cardIcon} ${styles[item.className]}`}
             ></div>
-            <h3 className={styles.cardTitle}>{item.title}</h3>
+            <h3 className={styles.cardTitle}>{t(item.title)}</h3>
           </a>
         ))}
       </div>

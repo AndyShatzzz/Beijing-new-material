@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./articles.module.scss";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export const Articles = ({ arrData }) => {
+  const { t } = useTranslation();
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -24,8 +26,8 @@ export const Articles = ({ arrData }) => {
                 />
               </div>
               <div className={styles.textContainer}>
-                <h3 className={styles.subtitle}>{item.subtitle}</h3>
-                <p className={styles.text}>{item.text}</p>
+                <h3 className={styles.subtitle}>{t(item.subtitle)}</h3>
+                <p className={styles.text}>{t(item.text)}</p>
               </div>
             </>
           </div>

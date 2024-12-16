@@ -1,19 +1,20 @@
 "use client";
 import styles from "./header.module.scss";
 import { useEffect, useState } from "react";
-import { Avatar } from "@mui/material";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import EmailIcon from "@mui/icons-material/Email";
+import { Avatar, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
+import { LanguageSwitcher } from "@/features/languageSwitcher/ui/languageSwitcher";
+import { useTranslation } from "@/context/hooks/useTranslate";
 
 export default function Header() {
   const [headClass, setHeadClass] = useState(styles.header);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menuStyle, setMenuStyle] = useState(styles.linksContainer);
   const [wrapperStyle, setWrapperStyle] = useState(styles.opacityWrapper);
+  const { t } = useTranslation();
+
   useEffect(() => {
     window.addEventListener("scroll", (evt) => {
       if (window.scrollY > 10) {
@@ -50,8 +51,8 @@ export default function Header() {
       <div className={wrapperStyle}></div>
       <div className={styles.container}>
         <Link href="/" className={styles.link}>
-          <span className={styles.logo}>BEIJING</span>
-          <span className={styles.logoText}>NEW MATERIALS</span>
+          <span className={styles.logo}>{t("BEIJING")}</span>
+          <span className={styles.logoText}>{t("NEW MATERIALS")}</span>
         </Link>
         <div className={menuStyle}>
           <Link
@@ -59,47 +60,44 @@ export default function Header() {
             className={styles.links}
             onClick={handleCloseMenu}
           >
-            About Us
+            {t("About Us")}
           </Link>
           <Link
             href="/materials"
             className={styles.links}
             onClick={handleCloseMenu}
           >
-            Our Products
+            {t("Our Products")}
           </Link>
           <Link
             href="/scope-of-application"
             className={styles.links}
             onClick={handleCloseMenu}
           >
-            Scope of Application
+            {t("Scope of Application")}
           </Link>
           <Link
             href="/#contacts"
             className={styles.links}
             onClick={handleCloseMenu}
           >
-            Contacts
+            {t("Contacts")}
           </Link>
+          <LanguageSwitcher />
         </div>
         {!isMenuOpen && (
-          <Avatar
-            sx={{ margin: 0, padding: 0, bgcolor: "#ff0000" }}
+          <IconButton
+            sx={{ margin: 0, padding: 0 }}
             className={styles.menuButton}
             onClick={handleOpenMenu}
           >
-            <MenuIcon />
-          </Avatar>
+            <MenuIcon sx={{ color: "#fff", width: "32px", height: "32px" }} />
+          </IconButton>
         )}
         {isMenuOpen && (
-          <Avatar
-            className={styles.menuButton}
-            onClick={handleCloseMenu}
-            sx={{ bgcolor: "#ff0000" }}
-          >
-            <CloseIcon />
-          </Avatar>
+          <IconButton className={styles.menuButton} onClick={handleCloseMenu}>
+            <CloseIcon sx={{ color: "#fff", width: "32px", height: "32px" }} />
+          </IconButton>
         )}
       </div>
     </header>
