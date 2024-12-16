@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./languageSwitcher.module.scss";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -37,7 +38,7 @@ export const LanguageSwitcher = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        sx={{ ml: 2 }}
+        className={styles.iconButton}
       >
         {language === "en" ? (
           <Image src={ukFlag} alt="China language" />

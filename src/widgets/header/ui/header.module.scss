@@ -195,10 +195,34 @@
     letter-spacing: 5px;
   }
 
+  .links:nth-child(1) {
+    grid-area: link1;
+  }
+
+  .links:nth-child(2) {
+    grid-area: link2;
+  }
+
+  .links:nth-child(3) {
+    grid-area: link3;
+  }
+
+  .links:nth-child(4) {
+    grid-area: link4;
+  }
+
+  .languageSwitcher {
+    grid-area: langSwitch;
+    align-self: stretch;
+    justify-self: stretch;
+  }
+
   .linksContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+    grid-template-areas:
+      "link1 link2 langSwitch"
+      "link3 link4 langSwitch";
   }
 
   .links {
@@ -266,6 +290,8 @@
     top: 140px;
     left: calc(100% / 2 - 90px);
     animation: topLinks 1s ease;
+    justify-content: center;
+    align-items: center;
   }
 
   .links {

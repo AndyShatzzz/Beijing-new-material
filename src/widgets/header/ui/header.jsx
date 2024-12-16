@@ -83,7 +83,9 @@ export default function Header() {
           >
             {t("Contacts")}
           </Link>
+          {/* <div className={styles.languageSwitcher}> */}
           <LanguageSwitcher />
+          {/* </div> */}
         </div>
         {!isMenuOpen && (
           <IconButton
