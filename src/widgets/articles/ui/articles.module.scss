@@ -2,8 +2,8 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@
 .itemContainer {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
   margin-top: 40px;
 }
 
@@ -34,7 +34,6 @@
 }
 
 .imageContainer {
-  flex: 1;
   position: relative;
   width: 250px;
   height: 210px;
@@ -74,4 +73,59 @@
 
 .text::first-letter {
   margin-left: 20px;
+}
+
+@media screen and (max-width: 930px) {
+  .container {
+    width: 600px;
+  }
+
+  .itemContainer {
+    width: 600px;
+  }
+
+  .textContainer {
+    width: 400px;
+  }
+
+  .imageContainer {
+    width: 200px;
+    height: 150px;
+  }
+  .image {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .container {
+    width: 300px;
+  }
+
+  .itemContainer {
+    width: 300px;
+    flex-direction: column;
+  }
+  .itemContainerLeft {
+    flex-direction: column;
+  }
+
+  .itemContainerRight {
+    flex-direction: column;
+  }
+
+  .textContainer {
+    width: 300px;
+  }
+
+  .imageContainer {
+    width: 250px;
+    height: 210px;
+  }
+
+  .image {
+    width: 250px;
+    height: 210px;
+  }
 }

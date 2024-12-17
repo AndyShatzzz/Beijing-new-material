@@ -28,7 +28,7 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", (evt) => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 30) {
         setHeadClass(styles.headerSticky);
       } else {
         setHeadClass(styles.header);

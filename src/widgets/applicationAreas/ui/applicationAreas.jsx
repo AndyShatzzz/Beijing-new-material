@@ -35,12 +35,12 @@ export const ApplicationAreas = () => {
     <section className={styles.applicationAreasSection}>
       <div className={styles.cardGrid}>
         {arrData.map((item, index) => (
-          <a href="#" key={index} className={styles.card}>
+          <div href="#" key={index} className={styles.card}>
             <div
               className={`${styles.cardIcon} ${styles[item.className]}`}
             ></div>
             <h3 className={styles.cardTitle}>{t(item.title)}</h3>
-          </a>
+          </div>
         ))}
       </div>
     </section>

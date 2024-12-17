@@ -50,6 +50,8 @@
 .cardIcon {
   width: 200px;
   height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .metallurgIcon {
@@ -83,13 +85,51 @@
   margin-top: 40px;
 }
 
-.cardDescription {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000;
-  margin-top: 15px;
+@media screen and (max-width: 930px) {
+  .cardGrid {
+    width: 600px;
+    gap: 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cardIcon {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cardTitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .cardGrid {
+    width: 300px;
+    column-gap: 30px;
+  }
+
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cardIcon {
+    width: 230px;
+    height: 230px;
+  }
+
+  .cardTitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 20px;
+  }
 }
