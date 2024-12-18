@@ -3,8 +3,7 @@
 import styles from "./footer.module.scss";
 import Image from "next/image";
 import mail from "../images/mail.svg";
-import footerVector1 from "../images/FooterVector1.svg";
-import footerVector2 from "../images/FooterVector2.svg";
+import bgImage1 from "../images/bgImage1.webp";
 import Link from "next/link";
 import { useTranslation } from "@/context/hooks/useTranslate";
 
@@ -12,18 +11,7 @@ export default function Footer() {
   const { t } = useTranslation();
   return (
     <section id="contacts" className={styles.footerContainer}>
-      <div className={styles.imgLayer}></div>
-      <Image
-        className={styles.vectorImageTop}
-        src={footerVector1}
-        alt="Image"
-      />
-      <Image
-        className={styles.vectorImageBottom}
-        src={footerVector2}
-        alt="Image"
-      />
-      <div className={styles.bgLayer}></div>
+      <Image className={styles.bgImage} src={bgImage1} alt="Image" />
       <div className={styles.contentContainer}>
         <Link href="/" className={styles.logoLink}>
           <span className={styles.logo}>{t("BEIJING")}</span>{" "}
@@ -35,10 +23,10 @@ export default function Footer() {
             <Image src={mail} alt="Mail" />
             <a
               className={styles.text}
-              href="mailto:BeijingNEWMATERIALS@GMAIL.COM"
+              href="mailto:sales@bjnewmaterials.com"
               target="blank"
             >
-              BEIJINGNEWMATERIALS@GMAIL.COM
+              sales@bjnewmaterials.com
             </a>
           </div>
         </div>

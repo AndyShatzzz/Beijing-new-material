@@ -16,22 +16,27 @@ export const WorksSphere = () => {
     {
       image: img1,
       text: "Metallurgical plants",
+      link: "/scope-of-application",
     },
     {
       image: img2,
       text: "Gas and oil production and processing facilities",
+      link: "/scope-of-application",
     },
     {
       image: img3,
       text: "Heavy machinery plants",
+      link: "/scope-of-application",
     },
     {
       image: img5,
       text: "Chemical industry enterprises",
+      link: "/scope-of-application",
     },
     {
       image: img6,
       text: "Mining and refining enterprises",
+      link: "/scope-of-application",
     },
   ];
   return (
@@ -47,7 +52,7 @@ export const WorksSphere = () => {
             <div className={styles.gridContainer} key={index}>
               <Image className={styles.image} src={item.image} alt="Картинка" />
               <p className={styles.text}>{t(item.text)}</p>
-              <a href="#" className={styles.button}>
+              <a href={item.link} className={styles.button}>
                 <p className={styles.buttonText}>{t("Read more")}</p>
                 <Image
                   className={styles.buttonVector1}

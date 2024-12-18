@@ -1,17 +1,17 @@
 .iconButton {
   width: 40px;
   height: 40px;
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 
 @media screen and (max-width: 930px) {
   .iconButton {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
 
 @media screen and (max-width: 630px) {
   .iconButton {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }

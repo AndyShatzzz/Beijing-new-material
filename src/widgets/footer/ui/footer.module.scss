@@ -1,13 +1,6 @@
 .footerContainer {
   width: 100%;
-  height: 200px;
-  background-color: #ccbdd3;
-  // background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-  //   url(../images/VectorFooter1.svg);
-  // background-image: url(../images/VectorFooter1.svg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 220px;
   width: 100%;
   position: relative;
   margin-top: 136px;
@@ -16,21 +9,15 @@
   align-items: center;
 }
 
-.vectorImageTop {
+.bgImage {
   width: 100vw;
+  height: 500px;
   position: absolute;
-  top: -136px;
-  left: 0;
-  background-color: #fff;
+  top: -150px;
   object-fit: cover;
-}
-
-.vectorImageBottom {
-  width: 100vw;
-  position: absolute;
-  bottom: -143px;
-  left: 0;
-  object-fit: cover;
+  object-position: bottom;
+  filter: blur(1.5px);
+  pointer-events: none;
 }
 
 .contentContainer {
@@ -41,6 +28,7 @@
   justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 70px;
+  z-index: 1;
 }
 
 .logoLink {
@@ -64,6 +52,7 @@
   font-size: 37px;
   line-height: 44px;
   letter-spacing: 11px;
+  text-shadow: 0px 0px 10px #000000;
 }
 
 .logoText {
@@ -73,6 +62,7 @@
   color: #fff;
   letter-spacing: 4px;
   font-weight: 300;
+  text-shadow: 0px 0px 10px #000000;
 }
 
 .logoImage {
@@ -112,6 +102,7 @@
 .textContainer {
   margin-top: 30px;
   margin-right: 100px;
+  text-shadow: 0px 0px 10px #000000;
 }
 
 .title {
@@ -137,8 +128,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  color: #ffffff;
+  color: #fff;
   margin-left: 10px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px #000;
 }
 
 .text:hover {

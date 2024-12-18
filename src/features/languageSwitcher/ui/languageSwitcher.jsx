@@ -7,7 +7,6 @@ import React, { useState } from "react";
 import chinaFlag from "../images/chinaFlag.svg";
 import ukFlag from "../images/ukFlag.svg";
 import { useLanguage } from "@/context/LanguageContext";
-import { useTranslation } from "@/context/hooks/useTranslate";
 
 export const LanguageSwitcher = () => {
   const { language, changeLanguage } = useLanguage();
@@ -27,8 +26,6 @@ export const LanguageSwitcher = () => {
     changeLanguage(lang);
     handleClose();
   };
-
-  const { t } = useTranslation();
 
   return (
     <>

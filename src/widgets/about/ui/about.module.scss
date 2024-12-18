@@ -24,17 +24,8 @@
   max-height: 900px;
   object-fit: cover;
   opacity: 0.4;
+  pointer-events: none;
 }
-
-// .title {
-//   width: 600px;
-// font-weight: 600;
-// font-size: 30px;
-// line-height: 48px;
-//   text-align: center;
-//   color: #fff;
-//   animation: text 5s 0.3s infinite;
-// }
 
 .title {
   width: 600px;
