@@ -13,6 +13,11 @@ import img14 from "@/shared/images/img14.webp";
 export default function ThermalInsulation() {
   const arrData = [
     {
+      image: img14,
+      subtitle: "Aerogel",
+      text: "Highly efficient innovative material, related to new type of insulation materials. Characterized by low thermal conductivity, high tensile strength and compression, convenient to use in the heat insulation of various structures.",
+    },
+    {
       image: img11,
       subtitle: "Stone wool based insulation materials",
       text: "Time-tested heat insulation compound made from crushed volcanic rocks: gabbro and basalt, special components and synthetic resins. Compared to glass wool, stone wool is not afraid of high humidity. The thickness of the fibers varies from 7 to 12 μm.",
@@ -26,11 +31,6 @@ export default function ThermalInsulation() {
       image: img13,
       subtitle: "Insulation based on foamed polyethylene",
       text: "Foamed polyethylene has a specific structure with closed surfaces. Material (in various forms) widely used - both for additional thermal insulation, and for waterproofing, and for noise insulation of a variety of building structures. Also this material is widely used in the engineering industry for the purpose of isolating all kinds of equipment.",
-    },
-    {
-      image: img14,
-      subtitle: "Aerogel",
-      text: "Highly efficient innovative material, related to new type of insulation materials. Characterized by low thermal conductivity, high tensile strength and compression, convenient to use in the heat insulation of various structures.",
     },
   ];
   return (

@@ -22,7 +22,7 @@ export const Articles = ({ arrData }) => {
                 <Image
                   src={item.image}
                   alt={`Image ${index + 1}`}
-                  layout="fill"
+                  className={styles.itemImage}
                 />
               </div>
               <div className={styles.textContainer}>

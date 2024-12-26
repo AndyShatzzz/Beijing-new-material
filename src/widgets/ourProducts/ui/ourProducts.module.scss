@@ -1,27 +1,3 @@
-@keyframes containerAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-80px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes containerAnimationTablet {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .mainContainer {
   width: 100vw;
   background-color: #fff;
@@ -38,7 +14,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
-  // animation: containerAnimation 2s 2s ease;
 }
 
 .gridChild {
@@ -111,7 +86,6 @@
   .gridContainer {
     width: 600px;
     gap: 30px;
-    animation: containerAnimationTablet 2s 2s ease;
   }
 
   .gridChild {
