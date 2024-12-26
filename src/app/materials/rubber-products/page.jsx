@@ -30,7 +30,7 @@ export default function RubberProducts() {
   return (
     <main className={styles.main} style={{ backgroundColor: "#fff" }}>
       <Header />
-      <WrapperRoute title={"Thermal insulation materials"} />
+      <WrapperRoute title={"Rubber products"} />
       <Articles arrData={arrData} />
 
       <Footer />

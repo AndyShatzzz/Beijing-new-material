@@ -23,10 +23,10 @@ export default function Footer() {
             <Image src={mail} alt="Mail" />
             <a
               className={styles.text}
-              href="mailto:sales@bjnewmaterials.com"
+              href="mailto:office@beijingnewmaterials.com"
               target="blank"
             >
-              sales@bjnewmaterials.com
+              office@beijingnewmaterials.com
             </a>
           </div>
         </div>
