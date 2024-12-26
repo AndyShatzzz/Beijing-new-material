@@ -9,6 +9,7 @@ import vector1 from "@/shared/images/Vector1.svg";
 import vector2 from "@/shared/images/Vector2.svg";
 import Image from "next/image";
 import { useTranslation } from "@/context/hooks/useTranslate";
+import Link from "next/link";
 
 export const WorksSphere = () => {
   const { t } = useTranslation();
@@ -52,7 +53,7 @@ export const WorksSphere = () => {
             <div className={styles.gridContainer} key={index}>
               <Image className={styles.image} src={item.image} alt="Картинка" />
               <p className={styles.text}>{t(item.text)}</p>
-              <a href={item.link} className={styles.button}>
+              <Link href={item.link} className={styles.button}>
                 <p className={styles.buttonText}>{t("Read more")}</p>
                 <Image
                   className={styles.buttonVector1}
@@ -64,7 +65,7 @@ export const WorksSphere = () => {
                   src={vector2}
                   alt="Image"
                 />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
